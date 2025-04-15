@@ -1,9 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
-  reactStrictMode: true,
-  distDir: 'out',
-  // outras opções, se houver
+  output: 'export',       // Exportação estática
+  reactStrictMode: true,  // Modo estrito para React
+  distDir: 'out',         // Diretório de saída
 };
 
 module.exports = nextConfig;
