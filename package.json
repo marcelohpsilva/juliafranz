@@ -1,4 +1,6 @@
 {
+
+
   "name": "julia-franz-website",
   "version": "0.1.0",
   "private": true,
@@ -6,7 +8,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+  "build": "next build",
+  "export": "next export"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.0",

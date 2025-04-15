@@ -7,9 +7,14 @@ import { Card, CardContent } from "@/components/ui/card";
 import { GlobeIcon } from "lucide-react";
 
 export default function EstheticianWebsite() {
-  const [language, setLanguage] = useState("en");
+  const [language, setLanguage] = useState<'en' | 'pt'>('en');
 
-  const content = {
+  const content: Record<'en' | 'pt', {
+    heroTitle: string;
+    heroSubtitle: string;
+    bookNow: string;
+    services: string;
+  }> = {
     en: {
       heroTitle: "Enhance Your Natural Beauty",
       heroSubtitle: "Explore our services and book your appointment today.",
@@ -35,7 +40,7 @@ export default function EstheticianWebsite() {
           <a href="#booking" className="text-sm font-medium hover:text-neutral-800">
             {content[language].bookNow}
           </a>
-          <Button variant="ghost" onClick={() => setLanguage(language === "en" ? "pt" : "en")}> 
+          <Button variant="ghost" onClick={() => setLanguage(language === "en" ? "pt" : "en")}>
             <GlobeIcon className="w-4 h-4 mr-2" />
             {language === "en" ? "Português" : "English"}
           </Button>
